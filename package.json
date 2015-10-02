@@ -1,0 +1,36 @@
+{
+  "name": "cat-clicker-pro",
+  "version": "1.0.0",
+  "description": "mvc catclicker app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronpflower/cat-clicker.git"
+  },
+  "keywords": [
+    "mvc",
+    "js"
+  ],
+  "author": "Aaron Flower",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaronpflower/cat-clicker/issues"
+  },
+  "homepage": "https://github.com/aaronpflower/cat-clicker#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-stylus": "^2.0.7",
+    "gulp-util": "^3.0.6",
+    "jshint": "^2.8.0",
+    "run-sequence": "^1.1.4"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  }
+}
