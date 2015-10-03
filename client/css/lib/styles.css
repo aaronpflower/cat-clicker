@@ -1,0 +1,118 @@
+body {
+  margin: 0 auto;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  max-width: 1080px;
+}
+p {
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: space-around;
+  background-color: #453749;
+}
+.header-item {
+  margin: 25px;
+  font-family: serif;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  color: #fff;
+}
+.container1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: stretch;
+}
+.cat-display {
+  width: 100%;
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 300px;
+  background-color: #808080;
+  cursor: pointer;
+}
+.cat-img {
+  flex-grow: 2;
+  flex-shrink: 0;
+}
+.right-display {
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 500px;
+  background-color: #3b6888;
+  color: #fff;
+}
+.directions {
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  align-self: center;
+}
+.cat-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cat-list-item {
+  width: 150px;
+  height: 45px;
+  margin-bottom: 35px;
+  font-size: 15px;
+  font-family: serif;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  background-color: #832c62;
+  color: #fff;
+  border-radius: 5%;
+  border: 1px solid #fff;
+}
+.cat-list-item:hover {
+  background-color: #fff;
+  color: #832c62;
+}
+.container2 {
+  padding: 25px 0px 25px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: space-around;
+  background-color: #453749;
+}
+.click-counter {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  color: #fff;
+}
+@media only screen and (min-width: 769px) {
+  .container1 {
+    flex-direction: row;
+  }
+  .right-display {
+    flex-basis: 100px;
+  }
+  .cat-display {
+    height: 500px;
+  }
+}
