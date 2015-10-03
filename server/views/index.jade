@@ -1,22 +1,23 @@
-DOCTYPE html
+doctype html
 html
 	head
 		title Cat Clicker Pro 
 		link(rel="stylesheet" type="text/css" href="/client/css/lib/styles.css")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(src="/client/img")
 
 	body
 		nav.header
-			p.header-item Cat Clicker Premium
+			p.header-item Cat Clicker Premium Pro Addition
 			
 		div.container1
-			img.cat-display#cat-img
+			img(id="cat-img").cat-display
 			div.right-display
 				h1.directions How to play: Click on cats to the right to display below, then click away!
-				div.cat-list #cat-list
+				div(id="cat-list").cat-list
 		
 		div.container2
-			p.click-counter #click-counter No Cat's to click yet
+			p(id="click-counter").click-counter No Cat's to click yet
 		
 	script(type="text/javascript" src="/client/js/catClicker.js")

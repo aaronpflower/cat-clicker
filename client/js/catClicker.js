@@ -5,27 +5,27 @@ var model = {
 	{
 		clickCount: 0,
 		name: "Bob",
-		imgSrc: "cat-1.jpg"
+		imgSrc: "client/img/cat-1.jpg"
 	},
 	{
 		clickCount: 0,
 		name: "Clark",
-		imgSrc: "cat-2.jpg"
+		imgSrc: "client/img/cat-2.jpg"
 	},
 	{
 		clickCount: 0,
 		name: "Jack and Jill",
-		imgSrc: "cat-3.jpg"		
+		imgSrc: "client/img/cat-3.jpg"		
 	},
 	{
 		clickCount: 0,
 		name: "Sufjan",
-		imgSrc: "cat-4.jpg"
+		imgSrc: "client/img/cat-4.jpg"
 	},
 	{
 		clickCount: 0,
 		name: "Brittney",
-		imgSrc: "cat-5.jpg"
+		imgSrc: "client/img/cat-5.jpg"
 	}
 	]
 };

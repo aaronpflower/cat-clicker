@@ -15,3 +15,4 @@ var server = app.listen('3000', function() {
 app.set('views', __dirname + '../../views');
 app.set('view engine', 'jade');
 app.use('/client', express.static(__dirname + '/../../client'))
+app.use('/client', express.static(__dirname + '/../../client/img'))
