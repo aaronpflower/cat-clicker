@@ -4,22 +4,22 @@ var model = {
 	cats: [
 	{
 		clickCount: 0,
-		name: "Bob",
+		name: "Amelia",
 		imgSrc: "client/img/cat-1.jpg"
 	},
 	{
 		clickCount: 0,
-		name: "Clark",
+		name: "Barney",
 		imgSrc: "client/img/cat-2.jpg"
 	},
 	{
 		clickCount: 0,
-		name: "Jack and Jill",
+		name: "Susan and Chip",
 		imgSrc: "client/img/cat-3.jpg"		
 	},
 	{
 		clickCount: 0,
-		name: "Sufjan",
+		name: "Aaron",
 		imgSrc: "client/img/cat-4.jpg"
 	},
 	{

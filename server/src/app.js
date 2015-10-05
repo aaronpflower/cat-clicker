@@ -1,15 +1,16 @@
 var express = require('express'),
-	app = express();
+	app = express(),
+	port = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
 	res.render('index')
 });
 
-var server = app.listen('3000', function() {
+var server = app.listen(port, function() {
 	var host = server.address().address;
-	var port = server.address().port;
+	var x = server.address().port;
 
-	console.log('Cat Clicker is running on http://%s:%s', host, port);
+	console.log('Cat Clicker is running on http://%s:%s', host, x);
 });
 
 app.set('views', __dirname + '../../views');
