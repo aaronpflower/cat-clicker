@@ -1,69 +1,100 @@
-body {
-	margin: 0 auto;
-	background-color: #fafafa;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-  	-moz-box-sizing: border-box;
-  	max-width: 1080px;
-}
+p, h1
+	text-align: center
+	font-size: 25px
+	font-family: sans-serif
+	font-weight: 300
+	color: #453749
+	margin: 0
 
-p {
-	font-size: 25px;
-	font-family: sans-serif;
-	font-weight: 300;
-	text-align: center;
-	margin: 0 auto;
-	padding: 0;
-}
+html, body
+	margin: auto
+	height: 100%
+	overflow: hidden
+	background-color: #fff
+	max-width: 1280px
+	box-sizing: border-box
 
-.header {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-content: center;
-	align-items: space-around;
-	background-color: #453749;
-}
+main
+	margin-top: 79px
 
-.header-item {
-	margin: 25px;
-	font-family: serif;
-	flex-grow: 1;
-	flex-shrink: 0;
-	flex-basis: 0;
-	color: #fff;
-}
+body
+	height: 100%
+	overflow: scroll
+	-webkit-overflow-scrolling: touch
+	
+.header
+	display: flex
+	display: -ms-flexbox
+	display: -webkit-flex
+	flex-flow: row wrap
+	-webkit-flex-flow: row wrap
+	justify-content: space-between
+	-webkit-justify-content: space-between
+	align-content: center
+	-webkit-align-content: center
+	align-items: stretch
+	-webkit-align-items: stretch
+	width: 100%
+	background-color: #fafafa
+	position: fixed
 
-.container1 {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: center;
-	align-items: stretch;
-}
+.shadow
+	width: 100%
+	height: 4px
+	background-color: #000
+	opacity: 0.3
+	position: fixed
+	top: 79px
 
-.cat-display {
-	width: 100%;
-	flex-grow: 2;
-	flex-shrink: 1;
-	flex-basis: 300px;
-	background-color: gray;
-	cursor: pointer;
-}
-
-.cat-img
-	flex-grow: 2
-	flex-shrink: 0
-
-.right-display
+.header-item
+	margin: 25px
+	font-family: serif
 	flex-grow: 1
+	flex-shrink: 0
+	flex-basis: 0
+
+.container
+	display: flex
+	display: -ms-flexbox
+	display: -webkit-flex
+	flex-flow: row wrap
+	-webkit-flex-flow: row wrap
+	justify-content: space-between
+	-webkit-justify-content: space-between
+	align-content: center
+	-webkit-align-content: center
+	align-items: stretch
+	-webkit-align-items: stretch
+
+.left-section, .cat-img
+	width: 100%
+	flex-grow: 2
+	-webkit-flex-grow: 2
+	flex-shrink: 1
+	-webkit-flex-shrink: 1
+	flex-basis: 300px
+	-webkit-flex-shrink: 300px
+	background-color: gray
+	cursor: pointer
+	border-bottom: 4px solid #832C62
+	
+.cat-img
+	background-color: none
+
+.cat-img:hover
+	opacity: 0.7
+
+.right-section
+	flex-grow: 1
+	-webkit-flex-grow: 1
 	flex-shrink: 2
-	flex-basis: 5	00px
+	-webkit-flex-shrink: 2
+	flex-basis: 500px
+	-webkit-flex-basis: 500px
 	background-color: #3B6888
 	color: #fff
-
+	border-bottom: 4px solid #832C62
+	
 .directions
 	font-size: 15px
 	padding: 10px
@@ -73,13 +104,14 @@ p {
 
 .cat-list
 	display: flex
-	flex-direction: column
-	flex-wrap: wrap
-	// justify-content: space-between
-	// align-content: center
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	flex-flow: column wrap
+	-webkit-flex-flow: column wrap
 	align-items: center
+	-webkit-align-items: center
 	
-.cat-list-item 
+.button, .admin-button
 	width: 150px
 	height: 45px
 	margin-bottom: 35px
@@ -93,38 +125,117 @@ p {
 	border-radius: 5%
 	border: 1px solid #fff
 
-
-.cat-list-item:hover
+.admin-button
 	background-color: #fff
 	color: #832C62
+	border: 1px solid #832C62
 
+.admin-button:hover
+	background-color: #832C62
+	color: #fff
+	border: 1px solid #fff
 
-.container2 {
-	padding: 25px 0px 25px 0px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
-	align-items: space-around;
-	background-color: #453749;
-}
+.button:hover
+	background-color: #fff
+	color: #832C62
+	border: 1px solid #832C62
 
-.click-counter 
-	flex-grow: 1;
-	flex-shrink: 0;
-	flex-basis: 0;
-	color: #fff;
+.click-container
+	flex-flow: row column
+	-webkit-flex-flow: row column
 
+.click-counter
+	flex-grow: 1
+	-webkit-flex-grow: 1
+	flex-shrink: 0
+	-webkit-flex-shrink: 0
+	flex-basis: 0
+	-webkit-flex-basis: 0
+	color: #fff
+	background-color: #453749
+	padding: 25px 0px 25px 0px
 
-@media only screen and (min-width: 769px) {
-	.container1 {
-		flex-direction: row;
-	}
-	.right-display {
-		flex-basis: 100px;
-	}
-	.cat-display {
-		height: 500px;
-	}
-}
+.admin-container
+	background-color: #3B6888
+	color: #fff
+	display: flex
+	display: -ms-flexbox
+	display: -webkit-flex
+	flex-flow: column wrap
+	-webkit-flex-flow: column wrap
+	justify-content: space-between
+	-webkit-justify-content: space-between
+	align-content: center
+	-webkit-align-content: center
+	align-items: stretch
+	-webkit-align-items: stretch
+
+.admin
+	align-self: center
+	-webkit-align-self: center
+	flex-grow: 1
+	-webkit-flex-grow: 1
+	flex-shrink: 2
+	-webkit-flex-shrink: 2
+	margin-top: 35px
+
+.overlay 
+	visibility: hidden
+	position: fixed
+	left: 0px
+	top: 0px
+	width: 100%
+	height: 100%
+	text-align: center
+	z-index: 1000
+	background-color: rgba(0 0 0 0.7)
+
+.form
+	display: flex
+	display: -ms-flexbox
+	display: -webkit-flex
+	flex-flow: column nowrap
+	-webkit-flex-flow: column nowrap
+	justify-content: center
+	-webkit-justify-content: center
+	align-content: center
+	-webkit-align-content: center
+	align-items: center
+	-webkit-align-items: center
+	width: 300px
+	margin: 150px auto
+	background-color: #fafafa
+	border: 1px solid #000
+	text-align: center
+	border-radius: 5%
+	padding: 25px
+
+.modal-close
+	position: absolute
+	right: 5px
+		
+.input-item
+	width: 175px
+	height: 30px
+	border: 1px solid #000
+	color: #000
+	margin-bottom: 10px
+	border-radius: 5%
+
+@media only screen and (min-width: 769px)
+	// .container
+	// 	flex-flow: row wrap
+	// 	-webkit-flex-flow: row wrap
+	.right-section
+		flex-basis: 100px
+		-webkit-flex-basis: 100px
+	.left-section, .cat-img
+		height: 500px
+		width: 650px
+	.admin
+		flex-direction: row
+		-webkit-flex-direction: row
+	main, .shadow, .header
+		border-left: 1px solid gray
+		border-right: 1px solid gray
+		max-width: 1280px

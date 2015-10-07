@@ -36,6 +36,7 @@ var controller = {
 
 		catListView.init();
 		catView.init();
+		adminView.init();
 	},
 	getCurrentCat: function() {
 		return model.currentCat;
@@ -55,6 +56,8 @@ var controller = {
 var catView = {
 	init: function () {
 		this.clickCounter = document.getElementById('click-counter');
+		this.catName = document.getElementById('catName');
+		this.catClicks = document.getElementById('catClicks');
 		this.catImg = document.getElementById("cat-img");
 		this.catImg.addEventListener('click', function(e){
 			controller.incrementCounter();
@@ -64,6 +67,8 @@ var catView = {
 	render: function () {
 		var currentCat = controller.getCurrentCat();
 		this.clickCounter.innerHTML = "You have clicked" + " " + currentCat.name + ":" + " " + currentCat.clickCount + " " + "times";
+		this.catName.innerHTML = currentCat.name;
+		this.catClicks.innerHTML = currentCat.clickCount;
 		this.catImg.src = model.currentCat.imgSrc;
 	}
 };
@@ -81,7 +86,7 @@ var catListView = {
 			catList = document.getElementById('cat-list');
 
 		elem.textContent = cat.name;
-		elem.className = 'cat-list-item';
+		elem.className = 'button';
 		
 			elem.addEventListener('click', (function(cat) {
 				return function() {
@@ -93,5 +98,25 @@ var catListView = {
 		};
 	}
 };
+
+var adminView = {
+	init: function() {
+		adminView.render();
+	},
+	render: function() {
+		var adminButton = document.getElementById('admin-button'),
+			form = document.getElementById('form'),
+			overlay = document.getElementById('overlay'),
+			close = document.getElementById('close');
+
+		adminButton.addEventListener('click', function() {
+			overlay.style.visibility = (overlay.style.visibility === "visible") ? "hidden" :"visible";
+		});
+		close.addEventListener('click', function() {
+			overlay.style.visibility = (overlay.style.visibility === "visible") ? "hidden" :"visible";
+		});
+	}
+};
+
 controller.init();
 
