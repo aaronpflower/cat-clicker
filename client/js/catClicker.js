@@ -67,8 +67,8 @@ var catView = {
 	render: function () {
 		var currentCat = controller.getCurrentCat();
 		this.clickCounter.innerHTML = "You have clicked" + " " + currentCat.name + ":" + " " + currentCat.clickCount + " " + "times";
-		this.catName.innerHTML = currentCat.name;
-		this.catClicks.innerHTML = currentCat.clickCount;
+		this.catName.value = currentCat.name;
+		this.catClicks.value = currentCat.clickCount;
 		this.catImg.src = model.currentCat.imgSrc;
 	}
 };
