@@ -50,6 +50,9 @@ var controller = {
 	incrementCounter: function() {
 		model.currentCat.clickCount++;
 		catView.render();		
+	},
+	updateCurrentCat: function () {
+
 	}
 };
 
@@ -67,8 +70,6 @@ var catView = {
 	render: function () {
 		var currentCat = controller.getCurrentCat();
 		this.clickCounter.innerHTML = "You have clicked" + " " + currentCat.name + ":" + " " + currentCat.clickCount + " " + "times";
-		this.catName.value = currentCat.name;
-		this.catClicks.value = currentCat.clickCount;
 		this.catImg.src = model.currentCat.imgSrc;
 	}
 };
@@ -105,15 +106,22 @@ var adminView = {
 	},
 	render: function() {
 		var adminButton = document.getElementById('admin-button'),
+			currentCat = controller.getCurrentCat(),
 			form = document.getElementById('form'),
 			overlay = document.getElementById('overlay'),
-			close = document.getElementById('close');
+			close = document.getElementById('close'),
+			updateCat = document.getElementById('submit')
 
 		adminButton.addEventListener('click', function() {
 			overlay.style.visibility = (overlay.style.visibility === "visible") ? "hidden" :"visible";
+			document.getElementById('catName').value = currentCat.name;
+			document.getElementById('catClicks').value = currentCat.clickCount;
 		});
 		close.addEventListener('click', function() {
 			overlay.style.visibility = (overlay.style.visibility === "visible") ? "hidden" :"visible";
+		});
+		submit.addEventListener('click', function() {
+			alert(currentCat.name);
 		});
 	}
 };
